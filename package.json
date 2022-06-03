@@ -1,21 +1,39 @@
 {
   "name": "abasibiangakejames_portfolio_comp229",
   "version": "1.0.0",
-  "description": "Comp229-Assignment1-Portfolio",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www"
   },
-  "keywords": [],
-  "author": "Abasibiangake James",
-  "license": "MIT",
   "dependencies": {
+    "debug": "~2.6.9",
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3", 
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
+  "description": "COMP229-Assignment2-Portfolio",
+  "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Abasibiangake?tab=repositories"
+    "url": "git+https://github.com/Abasibiangake/AbasibiangakeJames_portfolio_COMP229.git"
+  },
+  "keywords": [
+    "Code",
+    "COMP228",
+    "Portfolio",
+    "Express",
+    "Nodejs"
+  ],
+  "author": "Abasibiangake James",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abasibiangake/AbasibiangakeJames_portfolio_COMP229/issues"
+  },
+  "homepage": "https://github.com/Abasibiangake/AbasibiangakeJames_portfolio_COMP229#readme",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.3"
   }
 }
