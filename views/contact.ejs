@@ -59,6 +59,7 @@
         align-items: stretch;
         flex-grow: 1;
         margin-top: 0.5rem;
+        padding: 0rem 5rem;
         
     }
 
@@ -68,13 +69,17 @@
         max-width: 50%;
         padding: 2rem 4rem;
         border-radius: 25px;
-        margin-left: 5rem;
+        margin-left: 6rem;
+        
+        margin-top: 7rem;
+
     }
     
     .send-info{
         margin-left: 5rem;
         text-align: center;
         align-self: center;
+        margin-right: 5rem;
     }
 
     .user-info input{
@@ -122,38 +127,9 @@
       color: black
   }
   </style>
+  <%- include('../views/partials/header') %>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
-        
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="images\logo-transparent-white.png" alt="Logo" style="width:40px; height: 40px;">
-            </a>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span> 
-                                        
-                </button>
-                <a class="navbar-brand" href="#">Portfolio</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-            <!-- <ul class="nav navbar-nav">
-                
-            </ul> -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="index.ejs">Home</a></li>
-                    <li ><a href="about.ejs">About Me</a></li>
-                    <li ><a href="#project-link">Projects</a></li>
-                    <li><a href="#service-link">Services</a></li>
-                    <li class="active"><a href="contact.ejs">Contact Me</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <section class="send-message">
         <h1 class="send-info">Send a
             <span class="accent-text">Message</span>
@@ -180,28 +156,12 @@
                 <input type="text">
             </div>
             <div class="user-info">
-                <a href = "index.ejs" class = "btn" role = "button">Submit</a>
+                <a href = "/" class = "btn" role = "button">Submit</a>
             </div>
             
         </form>
         
     </section>
-
-    <footer class="main-footer">
-        <div class = "container-fluid">
-            <nav class="footer-nav">
-                
-                <a href = "https://www.linkedin.com/in/abasibiangake-james-0889a7150/" class="social-link">
-                    <i class="fab fa-linkedin"></i> Linkedin
-                </a>
-                <a href = "#" class="social-link">
-                    <i class="fab fa-twitter"></i> Twitter
-                </a>
-                <a href = "https://github.com/Abasibiangake" class="social-link">
-                    <i class="fab fa-github"></i> Github
-                </a>
-            </nav>
-        </div>
-    </footer>
 </body>
+<%- include('../views/partials/footer') %>
 </html>

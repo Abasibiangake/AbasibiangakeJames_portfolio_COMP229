@@ -51,7 +51,7 @@
         justify-content: space-between;
         flex-grow: 1;
         padding-bottom: 0%;
-        margin-bottom: -3.5rem;
+        /* //margin-bottom: -3.5rem; */
     }
 
     .about-main-section .img-wrapper{
@@ -149,10 +149,11 @@
     }
     
   </style>
+  <%- include('../views/partials/header') %>
 </head>
 <body >
 
-    <nav class="navbar navbar-inverse">
+    <!-- <nav class="navbar navbar-inverse">
         
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -168,19 +169,19 @@
                 <a class="navbar-brand" href="#">Portfolio</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-            <!-- <ul class="nav navbar-nav">
+             <ul class="nav navbar-nav">
                 
-            </ul> -->
+            </ul> 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.ejs">HomePage</a></li>
-                    <li class="active"><a href="about.ejs">About Me</a></li>
-                    <li><a href="project.ejs">Projects</a></li>
-                    <li><a href="service.ejs">Services</a></li>
-                    <li><a href="contact.ejs">Contact Me</a></li>
+                    <li><a href="/">HomePage</a></li>
+                    <li class="active"><a href="about">About Me</a></li>
+                    <li><a href="project">Projects</a></li>
+                    <li><a href="service">Services</a></li>
+                    <li><a href="contact">Contact Me</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <section class = "about-main-section">
         <div class="img-wrapper">
@@ -204,25 +205,7 @@
             <a href = "Resume/CV for Abasibiangake E. James.pdf" class = "btn" role = "button">Click on Resume</a>
         </div>
     </section>    
-
-
-<footer class="main-footer">
-    <div class = "container-fluid">
-        <nav class="footer-nav">
-            
-            <a href = "https://www.linkedin.com/in/abasibiangake-james-0889a7150/" class="social-link">
-                <i class="fab fa-linkedin"></i> Linkedin
-            </a>
-            <a href = "#" class="social-link">
-                <i class="fab fa-twitter"></i> Twitter
-            </a>
-            <a href = "https://github.com/Abasibiangake" class="social-link">
-                <i class="fab fa-github"></i> Github
-            </a>
-        </nav>
-    </div>
-</footer>
-  
 </body>
+<%- include('../views/partials/footer') %>
 </html>
   

@@ -16,22 +16,12 @@
       *, *::before, *::after {
   box-sizing: border-box;
 }
-      .navbar {
+    .navbar {
       margin-bottom: 0;
       border-radius: 0;
       background-color: rgb(107, 36, 36); /*rgba(252, 177, 86, 0.726);*/
       font-family: Poppins, sans-serif;
     }
-    
-    /* Add a red background color and some padding to the footer */
-    /* footer {
-      background-color: rgb(107, 36, 36);
-      padding: 2px;
-      font-family: Poppins, sans-serif;
-        font-size: 1.2rem;
-        color: rgb(255, 255, 255);
-              
-    } */
 
     body {
       background-color:  rgb(193, 108, 108);/*rgba(206, 145, 71, 0.726);rgba(252, 177, 86, 0.726);*/
@@ -42,12 +32,18 @@
         /* text-align:justify; */
         min-height:100vh;
         margin: 0;
+        align-content: center;
     } 
     
     .full-height-grow{
         display: flex;
         flex-direction: column;
         /* margin: left 100px; */
+    }
+
+    .project-container{
+        display: flex;
+        flex-direction: column;
     }
 
     .section-divider{
@@ -65,18 +61,17 @@
     }
 
     .service-wrapper{
-        padding: 0 1rem;
+        padding: 0 20%;
         text-align: center;
         align-content: center;
     }
 
     .project-wrapper{
-        padding: 0 1rem;
+        padding: 0 10%;
         text-align: justify;
         /* align-content: center; */
     }
     
-
     .service-name{
         padding-left: 1rem;
         padding-right: 1rem;
@@ -84,7 +79,6 @@
         text-align: center;
         font-weight:bold;
         letter-spacing: 0.1rem;
-
     }
 
     .service-section{
@@ -95,7 +89,6 @@
         border-radius: 2rem;
         width: 600px;
         margin-top: 3rem;
-       
     }
 
     .service-image{
@@ -126,7 +119,8 @@
         align-items: stretch;
         flex-grow: 1;
         margin-top: 3rem;
-        
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .project-dividerTwo{
@@ -134,11 +128,15 @@
         align-items: stretch;
         flex-grow: 1;
         margin-top: 3rem;
-        height: fit-content;        
+        height: fit-content;
+        padding-left: 5%;
+        padding-right: 5%;        
     }
 
     .project-section{
         background-color:rgb(113, 54, 54);
+        align-items: stretch;
+        flex-grow: 1;
         padding: 3rem 4rem;
         margin-bottom: 0.6rem;
         border-radius: 2rem;
@@ -161,7 +159,7 @@
         display: flex;
         align-items: stretch;
         padding: 0;
-        margin-left: 4rem;
+        margin-left: 1rem;
         height: inherit;
     }
 
@@ -204,38 +202,10 @@
 
 
   </style>
+  <%- include('../views/partials/header') %>
 </head>
-<body class = "container full-height-grow">
-    
-    <nav class="navbar navbar-inverse">
-        
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="images\logo-transparent-white.png" alt="Logo" style="width:40px; height: 40px;">
-            </a>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span> 
-                                        
-                </button>
-                <a class="navbar-brand" href="#">Portfolio</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-            <!-- <ul class="nav navbar-nav">
-                
-            </ul> -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="index.ejs">Home</a></li>
-                    <li ><a href="about.ejs">About Me</a></li>
-                    <li class="active"><a href="#project-link">Projects</a></li>
-                    <li><a href="#service-link">Services</a></li>
-                    <li><a href="contact.ejs">Contact Me</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
+<body >
 
     <a id="service-link"></a>
 
@@ -314,7 +284,7 @@
                     </span>
                 </div>
                 <div class="img-wrapperTwo">
-                    <img class="project-image" src = "images\Microfluidic Device Image.png" alt="Microfluidic image" style="width: 30pc; height: 20pc; border-radius: 1rem;">
+                    <img class="project-image" src = "images\Microfluidic Device Image.png" alt="Microfluidic image" style="width: 30pc; height: 30pc; border-radius: 1rem;">
                 </div>
             </section>
 
@@ -351,23 +321,9 @@
     
     
     
-<footer class="main-footer">
-    <div class = "container-fluid">
-        <nav class="footer-nav">
-            
-            <a href = "https://www.linkedin.com/in/abasibiangake-james-0889a7150/" class="social-link">
-                <i class="fab fa-linkedin"></i> Linkedin
-            </a>
-            <a href = "#" class="social-link">
-                <i class="fab fa-twitter"></i> Twitter
-            </a>
-            <a href = "https://github.com/Abasibiangake" class="social-link">
-                <i class="fab fa-github"></i> Github
-            </a>
-        </nav>
-    </div>
-</footer>
-  
+
+
 </body>
+<%- include('../views/partials/footer') %>
 </html>
   

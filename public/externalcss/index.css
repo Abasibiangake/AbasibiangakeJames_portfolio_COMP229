@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');    /* Remove the navbar's default margin-bottom and rounded borders */ 
+  
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: rgb(107, 36, 36); /*rgba(252, 177, 86, 0.726);*/
+    font-family: Poppins, sans-serif;
+}
+
+/* Add a red background color and some padding to the footer */
+/* footer {
+    background-color: rgb(107, 36, 36);
+    padding: 2px;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+            
+} */
+
+body {
+    background-color:  rgb(193, 108, 108);/*rgba(206, 145, 71, 0.726);rgba(252, 177, 86, 0.726);*/
+    padding: 2px;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    min-height: 100%;
+} 
+.btn{
+color: white;
+background-color: rgb(107, 36, 36);
+padding: .95rem 1.7rem;
+border-radius: .8rem;
+text-decoration: none;
+font-weight: bold;
+outline: none;
+border: none;
+cursor: pointer;
+margin-bottom: 10rem;
+}
+
+.btn:hover{
+    background-color: rgb(197, 84, 84);
+    color: white;
+}
+
+.btn:focus{
+    color: black
+}
+.main-footer{
+    /* margin-top: 6rem; */
+    background-color: rgb(107, 36, 36);
+    font-weight: bold;
+    padding: 5px;
+    align-items: center;
+}
+/* 
+.main-footer {
+    display: flex;
+    background-color: aqua;
+    justify-content:left;
+} */
+    .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    flex-grow: 1;
+} 
+.social-link{
+        width: 1em;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    color: white;
+    font-size:smaller;
+}
+.social-link:hover{
+    color: black;
+}
+.fab{
+    width: 1em;
+    margin-right: .5rem; 
+        
+}
+.accent-text{
+    /* font-family:cursive; */
+    font-weight:bolder;
+    font-size: 2rem;
+    color: rgb(107, 36, 36);
+}
