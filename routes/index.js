@@ -2,13 +2,19 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', homePage);
+router.get('/', loginPage);
+router.get('/home', homePage);
 router.get('/about', aboutPage);
 router.get('/project', projectsPage); 
 router.get('/service', servicePage);
 router.get('/contact', contactPage);
 
 //controller
+function loginPage (req, res, next) {
+    res.render('login', {title: "Login"});
+  }
+  
+
 function homePage (req, res, next) {
     res.render('index', {title: "AJ Portfolio HomePage"});
   }

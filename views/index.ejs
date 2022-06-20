@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="../public/stylesheets/style.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
   integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -13,6 +13,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
       @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    html {
+      position: relative;
+      min-height: 100%;
+    }
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -21,13 +25,16 @@
     }
 
     body {
-      background-color:  rgb(193, 108, 108);/*rgba(206, 145, 71, 0.726);rgba(252, 177, 86, 0.726);*/
+      background:-webkit-linear-gradient(rgba(255, 0, 0, 0.381),pink); /*url(/public/images/background-one.jpg); */
+      /*rgb(193, 108, 108);rgba(206, 145, 71, 0.726);rgba(252, 177, 86, 0.726);*/
       padding: 2px;
       font-family: Poppins, sans-serif;
       font-size: 1.5rem;
         color: rgb(255, 255, 255);
         text-align: center;
         min-height: 100%;
+
+        
     } 
     .btn{
     color: white;
@@ -49,11 +56,17 @@
       color: black
   }
   .main-footer{
-      /* margin-top: 6rem; */
-      background-color: rgb(107, 36, 36);
-      font-weight: bold;
-      padding: 5px;
-      align-items: center;
+    /* margin-top: 6rem; */
+    background-color: rgb(107, 36, 36);
+    font-weight: bold;
+    padding: 5px;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    position: absolute;
   }
 
      .container{
@@ -68,6 +81,7 @@
       margin-left: 2rem;
       color: white;
       font-size:smaller;
+      /* margin-top: 40px; */
     }
     .social-link:hover{
       color: black;
@@ -77,6 +91,10 @@
       margin-right: .5rem; 
            
     }
+  .footer-nav{
+    align-content: center;
+    justify-content: center;
+  }
     .accent-text{
         /* font-family:cursive; */
         font-weight:bolder;
@@ -85,8 +103,9 @@
     }
   </style>
 </head>
-<%- include('../views/partials/header') %>
+
 <body>
+  <%- include('../views/partials/header') %>
     </div class="container">
         <a class="brand-logo" href="#">
             <img src="images\logo-transparent-white.png" class = "center">

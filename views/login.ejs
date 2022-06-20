@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+<style>
+    body {
+       /*background:-webkit-linear-gradient(rgba(255, 0, 0, 0.381),pink); /*url(/public/images/background-one.jpg); */
+      /*rgb(193, 108, 108);rgba(206, 145, 71, 0.726);rgba(252, 177, 86, 0.726);*/
+      /* padding: 2px; */
+      font-family: Poppins, sans-serif;
+      font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        min-height: 100%; 
+
+        /* margin:0;
+        height: 100vh;
+        
+        display: flex;*/
+        justify-content: center;
+        align-content: center;
+        
+        font-size: medium; 
+        background-color: #505076;
+        background-image: url(../public/images/background-one.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+
+        
+    }
+
+    .container{
+        /* width:400px;
+        max-width: 400px; */
+        width:20rem;
+        max-width: 40rem;
+        margin:1rem;
+        padding: 2rem;
+        box-shadow: 0 0 40px rgb(0,0,0,0.2);
+        border-radius: 2rem; 
+        margin-left: 20rem;
+    }     
+
+    .form-content-error{
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        color: rgb(247, 92, 92);
+
+    }
+
+    .login-btn{
+        width: 43%;
+        padding: 0.51rem 1rem;
+        font-size: medium;
+        width:20.5rem;
+        max-width: 40rem;
+        border-radius: 0.5rem;
+        background-color: rgba(36, 36, 36, 0.2);;
+    }
+
+    .login-btn:hover{
+        background-color: aqua;
+        
+    }
+    .login-btn:active{
+        transform: scale(0.095);
+    }
+    .form-content{
+        border-radius: 0.5rem;
+    }
+
+    /* .form{
+        justify-content:center= ;
+    } */
+</style>
+</head>
+
+<%- include('../views/partials/header') %>
+<body>
+    <div class="container">
+        <form class="form" id="user-login">
+            <h1 class="title-form">Login</h1>
+            <div class="display-message display-error"></div>
+            <div class="form-content-group">
+                <input type="text" class="form-content" autofocus placeholder="Enter Username or email" style="height: 2rem; width: 20rem">
+                <div class="form-content-error"></div>
+            </div>
+            <div class="form-content-group">
+                <input type="password" class="form-content" autofocus placeholder="Enter Password" style="height: 2rem; width: 20rem">
+                <div class="form-content-error"></div>
+            </div>
+            <button class="login-btn" type="submit" >Login</button>
+        </form>
+    </div>
+</body>
+</html>

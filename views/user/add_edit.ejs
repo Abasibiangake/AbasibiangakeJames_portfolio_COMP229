@@ -1,0 +1,59 @@
+<%- include ../partials/header.ejs %>
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= user._id %>"
+                    >
+                    <label for="userTextField">UserName</label>
+                    <input type="text" class="form-control"
+                        id="userTextField"
+                        placeholder="Enter the user Name"
+                        name="username" 
+                        value="<%= user.username %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="PasswordTextField">Password</label>
+                    <input type="password" class="form-control"
+                    id="PasswordTextField"
+                    placeholder="Enter the password"
+                    name="password" 
+                    value="<%= user.password %>"
+                    required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="emailTextField">Email</label>
+                    <input type="email" class="form-control"
+                    id="emailTextField"
+                    placeholder="Enter your email"
+                    name="email" 
+                    value="<%= user.email %>"
+                    >
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/inventory/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>
