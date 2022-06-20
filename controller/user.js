@@ -12,7 +12,7 @@ module.exports.userList = function(req, res, next){
         else{
             console.log(userList);
             //send data from atlas db to the webpage
-            //use "userdb" and not "user" because the
+            //use "user" and not "user" because the
             // render goes into the route folder
             res.render(
                 'user/list', 
@@ -27,54 +27,106 @@ module.exports.userList = function(req, res, next){
 
 }
 
-// module.exports.displayEditPage = (req, res, next) => {
-//     let id = req.params.id;
+//req to read info from browser
+module.exports.displayEditPage = (req, res, next) => {
+    let id = req.params.id; //parameter to read is id, the read id is assigned to new id
 
-//     userModel.findById(id, (err, userToEdit) => {
-//         if(err)
-//         {
-//             console.log(err);
-//             res.end(err);
-//         }
-//         else
-//         {
-//             //show the edit view
-//             res.render('user/add_edit', {
-//                 title: 'Edit User', 
-//                 user: userToEdit
-//             })
-//         }
-//     });
-// }
-// module.exports.processEditPage = (req, res, next) => {
-//     let id = req.params.id
+    userModel.findById(id, (err, userToEdit) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            //show the edit view
+            res.render('user/add_edit', {
+                title: 'Edit User', 
+                user: userToEdit
+            })
+        }
+    });
+}
+module.exports.processEditPage = (req, res, next) => {
+    let id = req.params.id
 
-//     let updatedItem = InventoryModel({
-//         _id: req.body.id,
-//         item: req.body.item,
-//         qty: req.body.qty,
-//         status: req.body.status,
-//         size : {
-//             h: req.body.size_h,
-//             w: req.body.size_w,
-//             uom: req.body.size_uom,
-//         },
-//         tags: req.body.tags.split(",").map(word => word.trim())
-//     });
+    let updatedUser = userModel({
+        _id: req.body.id,
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email
+    });
 
-//     // console.log(updatedItem);
+    // console.log(updatedUser);
 
-//     InventoryModel.updateOne({_id: id}, updatedItem, (err) => {
-//         if(err)
-//         {
-//             console.log(err);
-//             res.end(err);
-//         }
-//         else
-//         {
-//             // console.log(req.body);
-//             // refresh the book list
-//             res.redirect('/inventory/list');
-//         }
-//     });
-// }
+    userModel.updateOne({_id: id}, updatedUser, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            // console.log(req.body);
+            // refresh the book list
+            res.redirect('/user/list');
+        }
+    });
+    
+}
+
+module.exports.performDelete = (req, res, next) => {
+    let id = req.params.id;
+
+    userModel.remove({_id: id}, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            // refresh the book list
+            res.redirect('/user/list');
+        }
+    });
+}
+
+
+
+module.exports.displayAddPage = (req, res, next) => {
+    let newUser = userModel();
+
+    res.render('user/add_edit', {
+        title: 'Add a new User',
+        user: newUser
+    })          
+}
+
+module.exports.processAddPage = (req, res, next) => {
+
+    let newUser = userModel({
+        _id: req.body.id,
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email
+        
+    });
+
+    userModel.create(newUser, (err, user) =>{
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            // refresh the book list
+            console.log(user);
+            res.redirect('/user/list');
+        }
+    });
+
+}
+
+

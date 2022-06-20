@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', loginPage);
+router.get('/login', loginPage);
 router.get('/home', homePage);
 router.get('/about', aboutPage);
 router.get('/project', projectsPage); 
